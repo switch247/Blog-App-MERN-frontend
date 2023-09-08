@@ -74,7 +74,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ![Alt Text](client/preview/Screenshot%202023-08-18%20140241.png)
 ![Alt Text](client/preview/Screenshot%202023-08-18%20140259.png)
 
-
+   "dev": "webpack -d --watch",
+    "server": "webpack-dev-server -d --watch --history-api-fallback --host $IP --port $PORT",
+    "build": "webpack --config webpack.config.js"
 
 
 
