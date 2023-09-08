@@ -9,6 +9,7 @@ const categoriesRoute = require("./routes/categories")
 const multer = require("multer");
 const path = require("path");
 
+
 dotenv.config()
 app.use(express.json())
 
