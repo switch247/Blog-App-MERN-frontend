@@ -73,3 +73,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ![Alt Text](client/preview/Screenshot%202023-08-18%20184420.png)
 ![Alt Text](client/preview/Screenshot%202023-08-18%20140241.png)
 ![Alt Text](client/preview/Screenshot%202023-08-18%20140259.png)
+
+
+
+
+
+
+  <!-- "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }, -->
