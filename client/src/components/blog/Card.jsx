@@ -60,7 +60,7 @@ export const Card = () => {
             </div>
           ))}
 
-          {posts ?
+          {posts && posts.length>0 ?
             posts.map((item) => (
               <div className="box boxItems" key={item._id}>
                 <div className="img">
