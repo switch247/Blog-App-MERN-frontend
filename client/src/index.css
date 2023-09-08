@@ -114,9 +114,20 @@ form input {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
 }
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 15px;
+}
 .container {
   max-width: 95%;
   margin: auto;
+  /* flex-wrap: wrap; */
 }
 footer {
   padding: 10px;
@@ -125,12 +136,31 @@ footer .icon {
   font-size: 20px;
   margin-left: 10px;
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1200px) {
+  .grid3,
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 950px) {
   .grid3,
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media screen and (max-width: 576px) {
+  .grid3,
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+
 .link {
   color: #000;
 }
@@ -140,3 +170,4 @@ footer .icon {
   color:var(--color-white) ;
  
 }
+

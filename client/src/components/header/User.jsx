@@ -8,9 +8,11 @@ import { RiImageAddLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { Context } from '../../context/Context';
+import {PF} from '../../App';
+
 export const User = () => {
   const { user, dispatch } = useContext(Context);
-  const PF = 'http://localhost:5000/images/';
+  // const PF = 'http://localhost:5000/images/';
 
   const handlelogout = () => {
     dispatch({ type: 'LOGOUT' });

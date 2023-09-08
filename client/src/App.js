@@ -11,13 +11,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { DetailsPages } from "./pages/details/DetailsPages"
 import { Account } from "./pages/account/Account"
 import { Create } from "./components/create/Create"
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 
 import { useContext } from 'react';
 import { Context } from './context/Context';
-
+// "proxy": "http://localhost:5000/api/"
+export const PF =   "    https://blogback-8voh.onrender.com/images/";
 const App = () => {
   const {user} = useContext(Context);
   return (

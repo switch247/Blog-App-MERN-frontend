@@ -1,4 +1,5 @@
 import React from 'react';
+import {PF} from '../../App';
 import './blog.css';
 import { blog } from '../../assets/data/data';
 import {
@@ -12,7 +13,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 export const Card = () => {
-  const PF = 'http://localhost:5000/images/';
+  // const PF = 'http://localhost:5000/images/';
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
   // console.log(search);
@@ -108,6 +109,8 @@ export const Card = () => {
             ))
           :
           <p>no posts</p>}
+
+          
         </div>
       </section>
     </>
