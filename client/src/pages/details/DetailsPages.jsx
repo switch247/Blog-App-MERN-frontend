@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import './details.css';
 
 import '../../components/header/header.css';
-import img from '../../assets/images/b5.jpg';
+// import img from '../../assets/images/b5.jpg';
 import { BsPencilSquare } from 'react-icons/bs';
-import { AiFillAlipaySquare, AiOutlineDelete } from 'react-icons/ai';
+// AiFillAlipaySquare,
+import {  AiOutlineDelete } from 'react-icons/ai';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { blog } from '../../assets/data/data';
@@ -44,13 +45,13 @@ export const DetailsPages = () => {
     };
     getPost();
     setUpdateMode(false);
-  }, [blogs, path]);
+  }, [blogs, path,id]);
 
   const handleDelete = async () => {
     try {
       // console.log(post,post.username === user.username);
-
-      const res = await axios.delete(`/posts/${post._id}`, {
+      // const res = 
+      await axios.delete(`/posts/${post._id}`, {
         data: { username: user.username },
       });
       window.location.replace('/');
@@ -59,7 +60,8 @@ export const DetailsPages = () => {
   };
   const handleUpdate = async () => {
     try {
-      const res = await axios.put(`/posts/${post._id}`, {
+      // const res = 
+      await axios.put(`/posts/${post._id}`, {
         username: user.username,
         title,
         desc:description,
@@ -77,7 +79,7 @@ export const DetailsPages = () => {
             <div className="left">
               {
                 post.photo ? (
-                  <img className="post-image" src={PF + post.photo} />
+                  <img className="post-image" alt='imag' src={PF + post.photo} />
                 ) : (
                   <img
                     className="post-image"

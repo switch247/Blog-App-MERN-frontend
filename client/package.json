@@ -2,9 +2,7 @@
   "name": "abels-blog",
   "version": "0.1.0",
   "private": true,
-  "devServer": {
-    "allowedHosts": "all"
-  },
+
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -22,11 +20,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT=3006 && react-scripts start && ng serve --host=0.0.0.0 --configuration=dev --disableHostCheck=true",
+    "start": "set PORT=3006 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
   },
   "eslintConfig": {
     "extends": [
@@ -35,7 +32,16 @@
     ]
   },
   "proxy": "https://blogback-8voh.onrender.com/api/",
-  "devDependencies": {
-    "webpack-cli": "^5.1.4"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

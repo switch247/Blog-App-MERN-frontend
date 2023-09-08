@@ -10,7 +10,7 @@ export const Login = () => {
   const userRef = useRef();
   const passwordRef = useRef();
   const { user, dispatch, isFetching } = useContext(Context);
-
+  console.log(user===null)
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({
