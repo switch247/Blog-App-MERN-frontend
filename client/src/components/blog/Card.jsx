@@ -11,7 +11,7 @@ import {
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
+import { rootUrl } from '../../App';
 export const Card = () => {
   // const PF = 'http://localhost:5000/images/';
   const [posts, setPosts] = useState([]);
@@ -19,7 +19,7 @@ export const Card = () => {
   // console.log(search);
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('/posts' + search);
+      const res = await axios.get(`${rootUrl}/posts` + search);
       setPosts(res.data);
       // console.log(res)
     };

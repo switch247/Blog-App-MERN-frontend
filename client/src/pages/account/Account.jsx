@@ -2,7 +2,7 @@ import React from 'react';
 import image from '../../assets/images/input.png';
 import './account.css';
 // updating account
-
+import { rootUrl } from '../../App';
 import { useContext, useState } from 'react';
 import { Context } from '../../context/Context';
 import axios from 'axios';
@@ -36,14 +36,14 @@ export const Account = () => {
         data.append('file', file);
         updatedUser.profilePic = fileName;
         try {
-          const r = await axios.post('/upload', data);
+          const r = await axios.post(`${rootUrl}/upload`, data);
           // console.log("file uploaded",r)
         } catch (e) {
           // console.log(e)
         }
       }
       try {
-        const res = await axios.put('/users/' + user._id, updatedUser);
+        const res = await axios.put(`${rootUrl}/users/` + user._id, updatedUser);
         setSuccess(true);
         dispatch({ type: 'UPDATE_SUCCESS', payload: res.data });
 

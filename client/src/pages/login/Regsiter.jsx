@@ -4,6 +4,8 @@ import back from '../../assets/images/my-account.jpg';
 import axios from 'axios';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { rootUrl } from '../../App';
+
 export const Regsiter = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -21,7 +23,7 @@ export const Regsiter = () => {
     if (password === password2) {
       // Passwords match, perform desired action
       try {
-        const res = await axios.post('/auth/register', {
+        const res = await axios.post(`${rootUrl}/auth/register`, {
           username,
           email,
           password,

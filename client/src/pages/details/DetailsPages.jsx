@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import './details.css';
-
+import { rootUrl } from '../../App';
 import '../../components/header/header.css';
 // import img from '../../assets/images/b5.jpg';
 import { BsPencilSquare } from 'react-icons/bs';
@@ -61,7 +61,7 @@ export const DetailsPages = () => {
   const handleUpdate = async () => {
     try {
       // const res = 
-      await axios.put(`/posts/${post._id}`, {
+      await axios.put(`${rootUrl}/posts/${post._id}`, {
         username: user.username,
         title,
         desc:description,

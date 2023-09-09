@@ -31,7 +31,7 @@
       "react-app/jest"
     ]
   },
-  "homepage":"https://bloghub-lcpx.onrender.com/",
+  
   "proxy": "https://blogback-8voh.onrender.com/api/",
   "browserslist": {
     "production": [
