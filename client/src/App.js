@@ -22,8 +22,10 @@ const App = () => {
   const {user} = useContext(Context);
   return (
     <>
+   
       <Router>
         <Header />
+        <div className="app">
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
@@ -35,8 +37,10 @@ const App = () => {
           <Route exact path='/account' component={user?  Account : Login} />
           <Route exact path='/create' component={ user? Create: Login } />
         </Switch>
+        </div>
         <Footer />
       </Router>
+     
     </>
   )
 }
