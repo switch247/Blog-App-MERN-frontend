@@ -19,7 +19,7 @@ import { Context } from './context/Context';
 // "proxy": "http://localhost:5000/api/"
 export const PF =   " https://blogback-8voh.onrender.com/images/";
 console.log(process.env.proxy)
-export const rootUrl = process.env.NODE_ENV === "production" ? 'https://blogback-8voh.onrender.com/api/' : ""
+export const rootUrl = process.env.NODE_ENV === "production" ? 'https://blogback-8voh.onrender.com/api' : ""
 // ${rootUrl}
 const App = () => {
   const {user} = useContext(Context);
