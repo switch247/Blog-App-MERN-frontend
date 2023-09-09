@@ -5,7 +5,7 @@ import { Context } from '../../context/Context';
 import axios from 'axios';
 import { useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
-
+import { rootUrl } from '../../App';
 export const Login = () => {
   const userRef = useRef();
   const passwordRef = useRef();
@@ -17,7 +17,7 @@ export const Login = () => {
       type: 'LOGIN_START',
     });
     try {
-      const res = await axios.post('/auth/login', {
+      const res = await axios.post(`${rootUrl}/auth/login`, {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });
