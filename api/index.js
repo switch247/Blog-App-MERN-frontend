@@ -15,7 +15,7 @@ dotenv.config()
 app.use(cors());
 app.use(express.json());
 app.use(cors({
-    origin: 'https://bloghub-lcpx.onrender.com/'
+    origin: '*'
   }));
   
 
