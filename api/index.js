@@ -14,9 +14,9 @@ const cors = require("cors");
 dotenv.config()
 app.use(cors());
 app.use(express.json());
-app.use(cors({
-    origin: '*'
-  }));
+// app.use(cors({
+//     origin: 'http://...'
+//   }));
   
 
 app.use("/images",express.static(path.join(__dirname,"/images")))
